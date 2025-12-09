@@ -1,0 +1,83 @@
+package main
+
+import "fmt"
+
+func DataTypes() {
+	// Integer types
+	var a int = 10
+	var b int8 = -5
+	var c uint16 = 65535
+	var u32 uint32 = 4294967295
+
+	// Floating-point types
+	var d float32 = 3.14
+	var e float64 = 2.718281828459045
+
+	// Complex numbers
+	var complexNum complex64 = complex(1, 2)
+	var complexNum2 complex128 = complex(3, 4)
+
+	// Boolean
+	var f bool = true
+
+	// String
+	var g string = "Hello, Go!"
+
+	// Constants
+	const pi float64 = 3.14159
+	const greeting string = "Welcome to Go programming!"
+
+	// Print values
+	fmt.Println("Integer a:", a)
+	fmt.Println("Integer b:", b)
+	fmt.Println("Unsigned Integer c:", c)
+	fmt.Println("Unsigned Integer u32:", u32)
+	fmt.Println("Float d:", d)
+	fmt.Println("Float e:", e)
+	fmt.Println("Complex64:", complexNum)
+	fmt.Println("Complex128:", complexNum2)
+	fmt.Println("Boolean f:", f)
+	fmt.Println("String g:", g)
+	fmt.Println("Constant pi:", pi)
+	fmt.Println("Constant greeting:", greeting)
+
+	// Composite types
+	var arr [3]int = [3]int{1, 2, 3}
+	var slice []int = []int{4, 5, 6}
+	var myMap map[string]int = map[string]int{"one": 1, "two": 2}
+
+	fmt.Println("Array:", arr)
+	fmt.Println("Slice:", slice)
+	fmt.Println("Map:", myMap)
+
+	// Struct
+	type Person struct {
+		Name string
+		Age  int
+	}
+	var p Person = Person{Name: "Alice", Age: 30}
+	fmt.Println("Struct Person:", p)
+
+	// Pointer
+	var ptr *int = &a
+	fmt.Println("Pointer to a:", *ptr)
+
+	// Function type
+	var add func(int, int) int = func(x int, y int) int {
+		return x + y
+	}
+	fmt.Println("Function add result:", add(3, 4))
+
+	// Channel
+	ch := make(chan int)
+	go func() {
+		ch <- 42
+	}()
+	fmt.Println("Channel value:", <-ch)
+
+	fmt.Println("JSON, Text, and HTML handling require respective packages.")
+}
+
+func main() {
+	DataTypes()
+}
