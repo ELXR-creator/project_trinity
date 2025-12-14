@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 )
+// tree shaking in Go is handled by the compiler and linker automatically. Unused imports are removed during the build process.
 
 func main() {
 	fmt.Println("Starting server on :8080")

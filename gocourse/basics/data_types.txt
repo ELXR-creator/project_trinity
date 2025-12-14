@@ -76,6 +76,16 @@ func DataTypes() {
 	fmt.Println("Channel value:", <-ch)
 
 	fmt.Println("JSON, Text, and HTML handling require respective packages.")
+
+	//default values
+	var defaultInt int
+	var defaultFloat float64
+	var defaultBool bool
+	var defaultString string
+	fmt.Println("Default int:", defaultInt)
+	fmt.Println("Default float64:", defaultFloat)
+	fmt.Println("Default bool:", defaultBool)
+	fmt.Println("Default string:", defaultString)
 }
 
 func main() {

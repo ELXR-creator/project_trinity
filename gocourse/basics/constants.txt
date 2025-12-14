@@ -1,0 +1,17 @@
+package main
+
+func main() {
+	const days int = 7
+	const pi float64 = 3.14159
+	const greeting string = "Hello, Go Constants!"
+
+	const (
+		monday   = 1
+		tuesday  = 2
+		wednesday = 3
+		thursday  = 4
+		friday    = 5
+		saturday  = 6
+		sunday    = 7	
+	)
+}
